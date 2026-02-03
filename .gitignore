@@ -7,7 +7,7 @@
 # Variables de entorno
 # =========================
 .env
-.env.*
+.env
 
 # =========================
 # Logs y cache
