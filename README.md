@@ -114,30 +114,32 @@ Un **framework MVC mínimo en PHP** con autenticación, CSRF y vistas dinámicas
 
 ## Estructura del proyecto
 
-proyecto/
-├── app/                  # Lógica central de la aplicación
-│   ├── Controllers/      # Controladores (manejan las peticiones)
-│   ├── Models/           # Modelos (interacción con la base de datos)
-│   └── Views/            # Archivos de plantilla y frontend
-│       ├── layouts/      # Estructuras base (Header, Footer, etc.)
-│       ├── partials/     # Componentes reutilizables
-│       ├── auth/         # Vistas de autenticación (Login, Registro)
-│       └── users/        # Vistas de gestión de usuarios
-├── core/                 # El "Motor" del sistema (Framework Core)
-│   ├── App.php           # Clase principal de inicialización
-│   ├── Controller.php    # Clase base de la que heredan los controladores
-│   ├── Model.php         # Clase base para la conexión a datos
-│   ├── View.php          # Motor de renderizado de vistas
-│   ├── Router.php        # Manejador de rutas y URLs
-│   ├── Middleware.php    # Filtros de peticiones (Seguridad)
-│   └── Csrf.php          # Protección contra ataques CSRF
-├── public/               # Directorio raíz público (Assets)
-│   ├── css/              # Hojas de estilo
-│   ├── js/               # Archivos JavaScript
-│   └── images/           # Recursos gráficos
-├── vendor/               # Dependencias de Composer (Autoload)
-├── .env                  # Variables de entorno (Configuración sensible)
-└── composer.json         # Configuración de dependencias y scripts
+## 📂 Estructura del Directorio
+
+```text
+app/
+├── Controllers/
+├── Models/
+├── Views/
+│   ├── layouts/
+│   ├── partials/
+│   ├── auth/
+│   └── users/
+core/
+├── App.php
+├── Controller.php
+├── Model.php
+├── View.php
+├── Router.php
+├── Middleware.php
+└── Csrf.php
+public/
+├── css/
+├── js/
+└── images/
+vendor/
+.env
+composer.json
 
 ---
 
