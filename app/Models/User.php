@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Core\Model;
-use RedBeanPHP\R;
 
 class User extends Model
 {
