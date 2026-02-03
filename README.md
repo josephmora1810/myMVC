@@ -34,7 +34,7 @@ Un **framework MVC mínimo en PHP** con autenticación, CSRF y vistas dinámicas
 1. Clonar el repositorio:
 
     ```bash
-        git clone [https://github.com/josephmora1810/myMVC.git](https://github.com/josephmora1810/myMVC.git)
+        git clone https://github.com/josephmora1810/myMVC.git
         cd myMVC
     ```
 
