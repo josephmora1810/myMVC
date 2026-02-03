@@ -2,6 +2,7 @@
 
 namespace Core;
 
+use Exception;
 use RedBeanPHP\R;
 
 class Model
@@ -14,6 +15,14 @@ class Model
 
     public static function find($id){
         return R::load(static::$table, $id);
+    }
+
+    public static function findByOne($column, $value){
+        return R::findOne(static::$table, "$column = ?", [$value]);
+    }
+
+    public static function exists($column, $value){
+        return R::findOne(static::$table, "$column = ?", [$value]) !== null;
     }
 
     public static function create(array $data){
@@ -31,7 +40,7 @@ class Model
         $model = static::find($id);
 
         if ($model->id == 0) {
-            throw new \Exception('Recurso no encontrado', 404);
+            throw new Exception('Recurso no encontrado', 404);
         }
 
         return $model;

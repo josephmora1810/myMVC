@@ -5,6 +5,11 @@ use Core\View;
 
 class Controller
 {
+    public function __construct()
+    {
+        Middleware::ensureSession();
+    }
+    
     protected function view(string $view, array $data = [], string $layout = 'layouts/app')
     {
         View::render($view, $data, $layout);

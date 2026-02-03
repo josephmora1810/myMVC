@@ -3,12 +3,15 @@
 namespace App\Controllers;
 
 use Core\Controller;
+use Core\Middleware;
 use App\Models\User;
 
 class UsersController extends Controller
 {
     public function show()
     {
+        Middleware::auth();
+        
         $id = $_GET['id'] ?? null;
 
         if (!$id){
